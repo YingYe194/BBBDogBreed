@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BBBDogBreed</string>
+    <string name="welcomed_to_this_app">Welcomed to this app</string>
+    <string name="list_all_breeds">List all breeds</string>
+    <string name="random_image">Pull a random dog image</string>
+    <string name="input_breed_button">Input breed</string>
+    <string name="select_breed_button">Select breed</string>
+    <string name="please_select_a_breed">Please select a breed:</string>
+    <string name="error_message">Breed not found (master breed does not exist)</string>
+    <string name="empty_error_message">Input dog breed is empty, please input value</string>
+    <string name="fetch_dog_list">Fetch Dog Images</string>
+    <string name="fetch_dog_single_image">Fetch Dog Single Image</string>
+    <string name="image_list_empty_error_message">Image list is empty</string>
+    <string name="here_are_all_dog_breed">Here are all dog breed:</string>
+    <string name="scrollable_image_list_header">Scrollable Image List:</string>
+    <string name="input_field_header">Please input breed</string>
+    <string name="drop_down_menu_header">Please select breed</string>
+    <string name="input_field_placeholder">Any Dog Breed</string>
+    <string name="dog_breed">Dog Breed</string>
+</resources>
