@@ -3,6 +3,8 @@ package com.example.bbbdogbreed.di
 import com.example.bbbdogbreed.domain.api.GetDogBreedAPI
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -12,6 +14,7 @@ import javax.inject.Singleton
 const val BASE_URL="https://dog.ceo/api/"
 
 @Module
+@InstallIn(SingletonComponent::class)
 class NetworkModule {
 
     @Singleton

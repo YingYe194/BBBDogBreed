@@ -4,6 +4,8 @@ plugins {
     id("kotlin-android")
 //    id("kotlin-android-extensions")
     id("kotlin-kapt")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -52,6 +54,7 @@ android {
     }
     kapt {
         generateStubs = true
+        correctErrorTypes = true
     }
 }
 
@@ -95,11 +98,15 @@ dependencies {
     kapt("com.google.dagger:dagger-android-processor:2.48")
 
     implementation("javax.inject:javax.inject:1")
+    implementation("androidx.activity:activity-ktx:1.6.0")
 
     implementation("androidx.compose.runtime:runtime:1.5.4")
     implementation("androidx.compose.runtime:runtime-livedata:1.5.4")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
     implementation("io.coil-kt:coil-compose:2.1.0")
     implementation("androidx.compose.material3:material3:1.1.2")
+
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
 
 }
