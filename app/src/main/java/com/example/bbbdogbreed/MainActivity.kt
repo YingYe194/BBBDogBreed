@@ -19,18 +19,13 @@ import com.example.bbbdogbreed.ui.MainContent
 
 class MainActivity : ComponentActivity() {
 
-    private lateinit var dogBreedViewModel: DogBreedViewModel
-
     @Inject
-    lateinit var dogBreedViewModelFactory: DogBreedViewModelFactory
+    lateinit var dogBreedViewModel: DogBreedViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         (application as DogBreedApplication).dogBreedComponent.inject(this)
-
-        dogBreedViewModel =
-            ViewModelProvider(this, dogBreedViewModelFactory)[DogBreedViewModel::class.java]
 
         setContent {
             val dogBreedViewState by dogBreedViewModel.dogBreedViewState.collectAsState()

@@ -10,9 +10,11 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 const val ERROR_MESSAGE = "service call is not success"
-class DogBreedViewModel(private val dogBreedRepository: DogBreedRepository) : ViewModel() {
+class DogBreedViewModel @Inject constructor(private val dogBreedRepository: DogBreedRepository) : ViewModel() {
+
     private val _randomDogImageViewState = MutableStateFlow(RandomDogImageViewState())
     val randomDogImageViewState: StateFlow<RandomDogImageViewState> =
         _randomDogImageViewState.asStateFlow()

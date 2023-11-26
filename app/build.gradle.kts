@@ -4,6 +4,8 @@ plugins {
     id("kotlin-android")
 //    id("kotlin-android-extensions")
     id("kotlin-kapt")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -52,6 +54,7 @@ android {
     }
     kapt {
         generateStubs = true
+        correctErrorTypes = true
     }
 }
 
@@ -102,4 +105,6 @@ dependencies {
     implementation("io.coil-kt:coil-compose:2.1.0")
     implementation("androidx.compose.material3:material3:1.1.2")
 
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
 }
